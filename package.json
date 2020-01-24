@@ -1,0 +1,21 @@
+{
+	"name": "csquicksnips",
+	"displayName": "C# Advanced Productivity Snippets",
+	"description": "Provides snippets for frequently used larger classes like API clients, DB Contexts, etc",
+	"version": "1.0.0",
+	"publisher": "mavusi",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "csharp",
+				"path": "./snippets.json"
+			}
+		]
+	}
+}
