@@ -15,3 +15,8 @@ This will generate your entire API controller for you, ready for dependency inje
 - `snip-api` Api Controller
 - `snip-ef` EF DbContext
 - `snip-api-client` Json Api Generic Client Base
+
+## Example 
+![type "snip"](https://raw.githubusercontent.com/mavusi/csquicksnips/master/snip.png)
+
+![profit](https://raw.githubusercontent.com/mavusi/csquicksnips/master/snipres.png)
