@@ -9,15 +9,9 @@ E.g. to insert a new Web Api Controller, start typing "snip". A list of snippets
 This will generate your entire API controller for you, ready for dependency injection.
 
 ## What's new in v1.0.0
-- SQL Server Connection String with Integrated Security
--- **prefix ["snip","snip-sql-integrated"]**
-- Generic Repository Interface
--- **prefix ["snip","snip-generic-irepository"]**
-- Generic Repository Interface Implementation
--- **prefix ["snip","snip-generic-repository"]**
-- Api Controller
--- **prefix ["snip", "snip-api"]**
-- EF DbContext
--- **prefix ["snip", "snip-ef"]**
-- Json Api Generic Client Base
--- **prefix ["snip", "snip-api-client"]**
+- *snip-sql-integrated* SQL Server Connection String with Integrated Security 
+- *snip-generic-irepository* Generic Repository Interface 
+- *snip-generic-repository* Generic Repository Interface Implementation 
+- *snip-api* Api Controller
+- *snip-ef* EF DbContext
+- *snip-api-client* Json Api Generic Client Base
