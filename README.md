@@ -20,3 +20,5 @@ This will generate your entire API controller for you, ready for dependency inje
 ![type "snip"](https://raw.githubusercontent.com/mavusi/csquicksnips/master/snip.png)
 
 ![profit](https://raw.githubusercontent.com/mavusi/csquicksnips/master/snipres.png)
+
+naturally it is up to you to add the requisite Nuget packages. This isn't magic.
