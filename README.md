@@ -10,14 +10,14 @@ This will generate your entire API controller for you, ready for dependency inje
 
 ## What's new in v1.0.0
 - SQL Server Connection String with Integrated Security
-  prefix ["snip","snip-sql-integrated"]
+  **prefix ["snip","snip-sql-integrated"]**
 - Generic Repository Interface
-  prefix ["snip","snip-generic-irepository"]
+  **prefix ["snip","snip-generic-irepository"]**
 - Generic Repository Interface Implementation
-  prefix ["snip","snip-generic-repository"]
+  **prefix ["snip","snip-generic-repository"]**
 - Api Controller
-  prefix ["snip", "snip-api"]
+  **prefix ["snip", "snip-api"]**
 - EF DbContext
-  prefix ["snip", "snip-ef"]
+  **prefix ["snip", "snip-ef"]**
 - Json Api Generic Client Base
-  prefix ["snip", "snip-api-client"]
+  **prefix ["snip", "snip-api-client"]**
