@@ -1,10 +1,21 @@
 {
 	
-	"SQL Server Connection String with Integrated Security":{
+	"SQL Server Integrated Security":{
 		"prefix":["snip","snip-sql-integrated"],
 		"description":"SQL Server connection string with integrated security",
 		"body":["\"Data Source=$1;Initial Catalog=$2;Integrated Security=True\""]
 	},
+	"SQL Server Multiple Active Result Sets":{
+		"prefix":["snip","snip-sql-mars"],
+		"description": "SQL Server connection string with Multiple Active Result Sets",
+		"body":["Server=$1;Database=$2;Trusted_Connection=True;MultipleActiveResultSets=true;"]
+	},
+	"SQL Server Multiple Active Result Sets with credentials":{
+		"prefix":["snip","snip-sql-mars-creds"],
+		"description": "SQL Server connection string with Multiple Active Result Sets",
+		"body":["Server=$1;Database=$2;User Id=$3;Password=$4;MultipleActiveResultSets=true;"]
+	},
+	
 	
 	"Generic Repository Interface":
 	{
@@ -90,6 +101,15 @@
 		"body": [
 		"public class $1Context : DbContext",
 		"{",
+		"    #region Powershell EF Migration Commands",
+		"    /*",
+		"    dotnet ef dbcontext scaffold \"<connectionstring>\" Microsoft.EntityFrameworkCore.SqlServer -o <foldername>",
+		"    dotnet ef migrations add <MigrationName>",
+		"    dotnet ef migrations remove",
+		"    dotnet ef database update",
+		"    dotnet ef database update <RollBackToThisMigration>",
+		"    */",
+		"#endregion",
         "    public DbSet<$1> $1s { get; set; }",
 	    "",		
 		"    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)",

@@ -8,6 +8,13 @@ E.g. to insert a new Web Api Controller, start typing "snip". A list of snippets
 
 This will generate your entire API controller for you, ready for dependency injection.
 
+## What's new in v1.0.1
+- `snip-sql-mars` SQL Server connection string with multiple active resultsets.
+- `snip-sql-mars-creds` SQL Server connection string with multiple active resultsets and user credentials.
+- CI/CD YAML support
+- `snip-yaml-job-simple` A simple CI/CD YAML job definition
+- `snip-yaml-dynamic` A dynamically created test environment definition with a shutdown-activated teardown script
+
 ## What's new in v1.0.0
 - `snip-sql-integrated` SQL Server Connection String with Integrated Security 
 - `snip-generic-irepository` Generic Repository Interface 

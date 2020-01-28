@@ -1,8 +1,8 @@
 {
 	"name": "csquicksnips",
 	"displayName": "C# Advanced Productivity Snippets",
-	"description": "Provides snippets for frequently used larger classes like API clients, DB Contexts, etc",
-	"version": "1.0.0",
+	"description": "Provides snippets for more complex frequently used code like API clients, DB Contexts, YAML job definitions, etc",
+	"version": "1.0.1",
 	"publisher": "mavusi",
 	"engines": {
 		"vscode": "^1.28.0"
@@ -16,6 +16,10 @@
 			{
 				"language": "csharp",
 				"path": "./snippets.json"
+			},
+			{
+				"language": "yaml",
+				"path": "./yaml.json"
 			}
 		]
 	}

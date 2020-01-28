@@ -1,0 +1,51 @@
+{
+	"Simple Job":{
+		"prefix":["snip","snip-yaml-job-simple"],
+		"description":"Create a simple yaml job snippet",
+		"body":[
+			"<job name>:",
+			"  stage: <stage>",
+			"  image: node",
+			"  script:",
+			"    - npm install #install everything in package.json",
+			"    - npm install -g <package-name>",
+			"  artifacts:",
+			"    paths:",
+			"      - ./<publish folder path>"
+		]
+	},
+	"Dynamic environment with teardown":{
+		"prefix":["snip","snip-yaml-dynamic"],
+		"description":"Create a yaml job snippet for dynamic environment + a teardown job that is called on environment shutdown",
+		"body":[
+			"deploy merge request to new dynamic environment review:",
+			"  stage: deploy review",
+			"  environment: ",
+			"    name: review/$CI_COMMIT_REF_NAME",
+			"    url: http://$CI_ENVIRONMENT_SLUG.host.com #will dynamically spin up this new dynamic environment on \"*.host.com\"",
+			"    on_stop: trash review #run the \"trash review\" job OnStop of environment",
+			"  only:",
+			"    - merge_requests #only perform this job for merge requests",
+			"  image: node",
+			"  script: ",
+			"    - npm install <dependencies>",
+			"    - <deploy scrip> $CI_ENVIRONMENT_SLUG.host.com #this will be whichever script is needed to deploy to your testing environment",
+			"",
+			"trash review:",
+			"  stage: deploy review",
+			"  variables:",
+			"    GIT_STRATEGY: none #prevent this from being run unless we call it explicitly",
+			"  environment: ",
+			"    name: review/$CI_COMMIT_REF_NAME",
+			"    url: http://$CI_ENVIRONMENT_SLUG.host.com #will dynamically spin up this new dynamic environment",
+			"    action: stop",
+			"  only:",
+			"    - merge_requests #only perform this job for merge requests",
+			"  script:",
+			"    # the following scripts will change depending on which hosting infrastructure is used. The scripts show are specific to surge.", 
+			"    # Tearing down/destroying dynamic environments will be unique to each tech stack",
+			"    - npm install --global surge",
+			"    - surge teardown mavusi-$CI_ENVIRONMENT_SLUG.surge.sh"
+		]
+	}
+}
