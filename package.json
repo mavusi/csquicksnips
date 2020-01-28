@@ -1,6 +1,6 @@
 {
 	"name": "csquicksnips",
-	"displayName": "C# Advanced Productivity Snippets",
+	"displayName": "Advanced Snippets",
 	"description": "Provides snippets for more complex frequently used code like API clients, DB Contexts, YAML job definitions, etc",
 	"version": "1.0.1",
 	"publisher": "mavusi",
