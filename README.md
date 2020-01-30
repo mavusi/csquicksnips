@@ -7,8 +7,10 @@ All these snippets are prefixed with "snip" as well as "snip-?" to bundle them u
 E.g. to insert a new Web Api Controller, start typing "snip". A list of snippets will pop up. You can either press down to select the API snippet, or continue typing "snip-api" to select the specific snippet automatically.
 
 This will generate your entire API controller for you, ready for dependency injection.
-
-## What's new in v1.0.1
+## What's new in v1.2.1
+-Added dockerfile support
+-`snip-docker` Adds a skeleton of docker file contents
+## What's new in v1.1.1
 - `snip-sql-mars` SQL Server connection string with multiple active resultsets.
 - `snip-sql-mars-creds` SQL Server connection string with multiple active resultsets and user credentials.
 - CI/CD YAML support
