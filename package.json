@@ -2,7 +2,7 @@
 	"name": "csquicksnips",
 	"displayName": "Advanced Snippets",
 	"description": "Provides snippets for more complex frequently used code like API clients, DB Contexts, YAML job definitions, etc",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"publisher": "mavusi",
 	"engines": {
 		"vscode": "^1.28.0"

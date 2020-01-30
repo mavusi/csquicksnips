@@ -9,7 +9,8 @@
 			"RUN <command_2>",
 			"RUN <command_n>",
 			"",
-			"COPY <source directory>"
+			"COPY <source directory> <target directory on image>",
+			"ENTRYPOINT <APP_NAME>=<absolute path to entrypoint>"
 		]
 	}
 }
