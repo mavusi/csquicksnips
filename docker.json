@@ -1,0 +1,15 @@
+{
+	"Docker file skeleton":{
+		"prefix":["snip","snip-docker"],
+		"description":"Creates a skeleton of a new docker file",
+		"body":[
+			"FROM <base imagename>",
+			"",
+			"RUN <command_1>",
+			"RUN <command_2>",
+			"RUN <command_n>",
+			"",
+			"COPY <source directory>"
+		]
+	}
+}

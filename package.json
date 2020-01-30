@@ -21,6 +21,10 @@
 			{
 				"language": "yaml",
 				"path": "./yaml.json"
+			},
+			{
+				"language": "dockerfile",
+				"path": "./docker.json"
 			}
 		]
 	}
