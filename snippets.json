@@ -111,10 +111,12 @@
 		"    */",
 		"#endregion",
         "    public DbSet<$1> $1s { get; set; }",
-	    "",		
+		"",		
+		"    public $1Context(){}",
+		"    public $1Context(DbContextOptions<BloggingContext> options):base(options){}",
 		"    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)",
 		"    {",
-		"        optionsBuilder.UseSqlServer(@\"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TestDb;\");",
+		"        //optionsBuilder.UseSqlServer(@\"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TestDb;\");",
 		"    }",
 		"",
 		"    protected override void OnModelCreating(ModelBuilder modelBuilder)",
@@ -123,6 +125,45 @@
 		"    }",
 		"}"],
 		"description": "Api Controller"
+	  },
+	  "EF Core Startup.cs Service Configuration":{
+		  "prefix":["snip","snip-ef-startup-config"],
+		  "description":"Sample config settings for Startup.ConfigureServices()",
+		  "body":[
+			"var configurationSection = Configuration.GetSection(\"ConnectionStrings:DefaultConnection\");",
+            "services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(configurationSection.Value));"
+		  ]
+	  },
+	  "EF Core in-memory mock sample unit test":{
+		  "prefix":["snip","snip-ef-mock-config"],
+		  "description":"Generates a sample unit test with in-memory mock database config and sample test.",
+		  "body":[
+			"public void GetAllTest()",
+			"{",
+			"    //Requires the package Microsoft.EntityFrameworkCore.InMemory",
+			"        var options = new DbContextOptionsBuilder<MyDbContext>()",
+			"            .UseInMemoryDatabase(databaseName: \"MyDatabase\")",
+			"            .Options;",
+			"",
+			"        // Insert seed data into the database using one instance of the context",
+			"        using (var context = new MyDbContext(options))",
+			"        {",
+			"            context.Movies.Add(new Movie {Id = 1, Title = \"Movie 1\", YearOfRelease = 2018, Genre = \"Action\"});",
+			"            context.Movies.Add(new Movie {Id = 2, Title = \"Movie 2\", YearOfRelease = 2018, Genre = \"Action\"});",
+			"            context.Movies.Add(nnew Movie {Id = 3, Title = \"Movie 3\", YearOfRelease = 2019, Genre = \"Action\"});",
+			"            context.SaveChanges();",
+			"        }",
+			"",
+			"        // Use a clean instance of the context to run the test",
+			"        using (var context = new MyDbContext(options))",
+			"        {",
+			"            MyRepository myRepository = new MyRepository(context);",
+			"            List<Movies> movies == myRepository.GetAll()",
+			"",
+			"            Assert.Equal(3, movies.Count);",
+			"        }",
+			"}"
+		  ]
 	  },
 	  "Json Api Generic Client Base":
 	  {
