@@ -145,5 +145,68 @@
 			"volumes:",
 			"  db-data:"
 		]
+	},
+	"Name":{
+		"prefix":["snip","snip-kubernetes-pod-definition"],
+		"description":"Sample Kubernetes Pod Definition file",
+		"body":[
+			"apiVersion: v1",
+			"kind: Pod",
+			"metadata:",
+			"  name: my-pod",
+			"  labels:",
+			"    app: myapp",
+			"    type: front-end",
+			"spec:",
+			"  containers:",
+			"  - name: my-container-name",
+			"    image: nginx",
+			"    env:",
+            "    - name: PASSWORD",
+            "      value: mysecretpassword",
+			"  - name: my-second-container-name",
+			"    image: mysql"
+		]
+	},
+	"Kubernetes Replica Set definition":{
+		"prefix":["snip","snip-kubernetes-replicaset"],
+		"description":"Kubernetes ReplicaSet starter",
+		"body":[
+			"apiVersion: apps/v1",
+			"kind: ReplicaSet",
+			"",
+			"metadata:",
+			"  name: $1-replicaset",
+			"  labels:",
+			"      app: $1",
+			"      type: front-end",
+			"",
+			"spec:",
+			"  template:",
+			"",
+			"    metadata:",
+			"      name: $1-pod",
+			"      labels:",
+			"        app: $1",
+			"        type: front-end",
+			"    spec:",
+			"      containers:",
+			"#list your docker containers here",
+			"      - name: container1",
+			"        image: nginx",
+			"      - name: container2",
+			"        image: node",
+			"#set min. number of replicas",
+			"  replicas: 2",
+			"  selector: ",
+			"    matchLabels:",
+			"        app: $1",
+			"        type: front-end",
+			"",
+			"# kubectl create -f <filename>.yml",
+			"# kubectl replace -f <filename>.yml <-- replaces an existing replicaset defition",
+			"# kubectl get replicaset",
+			"# kubectl get pods"
+		]
 	}
 }

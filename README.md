@@ -8,6 +8,10 @@ E.g. to insert a new Web Api Controller, start typing "snip". A list of snippets
 
 This will generate your entire API controller for you, ready for dependency injection.
 
+## what's new in v1.2.5
+-`snip-kubernetes-pod-definition` Simple Kubernetes pod definition
+-`snip-kubernetes-replicaset` Kubernetes RepliceSet definition
+
 ## what's new in v1.2.4
 -`snip-ef-startup-config` Sample EF Core startup.cs configuration
 -`snip-ef-mock-config` Sample EF Core unit test utilising in-memory mock storage and setup
