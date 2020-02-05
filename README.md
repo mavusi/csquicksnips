@@ -10,7 +10,8 @@ This will generate your entire API controller for you, ready for dependency inje
 
 ## what's new in v1.2.5
 - `snip-kubernetes-pod-definition` Simple Kubernetes pod definition
-- `snip-kubernetes-replicaset` Kubernetes RepliceSet definition
+- `snip-kubernetes-replicaset` Kubernetes ReplicaSet definition
+- `snip-kubernetes-deployment` Creates a sample Kubernetes deployment definition file
 
 ## what's new in v1.2.4
 - `snip-ef-startup-config` Sample EF Core startup.cs configuration
