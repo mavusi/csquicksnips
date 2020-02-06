@@ -8,6 +8,10 @@ E.g. to insert a new Web Api Controller, start typing "snip". A list of snippets
 
 This will generate your entire API controller for you, ready for dependency injection.
 
+## what's new in v1.2.6
+- `snip-kubernetes-nodeport` Kubernetes NodePort definition
+- `snip-kubernetes-clusterip`Kubernetes ClusterIP definition
+
 ## what's new in v1.2.5
 - `snip-kubernetes-pod-definition` Simple Kubernetes pod definition
 - `snip-kubernetes-replicaset` Kubernetes ReplicaSet definition
