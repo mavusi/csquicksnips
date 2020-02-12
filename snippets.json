@@ -84,7 +84,11 @@
 
 	"Api Controller": {
 		"prefix": ["snip", "snip-api"],
-		"body": ["[Route(\"api\")]",
+		"body": [
+			"using Microsoft.AspNetCore.Mvc;",
+			"using Microsoft.Extensions.Logging;",
+			"",
+			"[Route(\"api\")]",
 			"[ApiController]",
 			"public class $1Controller : ControllerBase",
 			"{",
