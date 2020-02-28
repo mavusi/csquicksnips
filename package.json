@@ -1,4 +1,5 @@
 {
+	"allInOne":"git add .; git commit -m 'updates'; git push; git pull; vsce package; vsce publish;",
 	"name": "csquicksnips",
 	"displayName": "Advanced Snippets",
 	"description": "Provides snippets for more complex frequently used code like API clients, DB Contexts, YAML job definitions, etc",
