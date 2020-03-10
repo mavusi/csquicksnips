@@ -8,6 +8,9 @@ E.g. to insert a new Web Api Controller, start typing "snip". A list of snippets
 
 This will generate your entire API controller for you, ready for dependency injection.
 
+## what's new in v1.3.2
+- Removed generic repo snippets because you really shouldn't be doing that
+
 ## what's new in v1.3.0
 - `snip-bootstrap-login` Generates a Bootstrap login form
 - `snip-bootstrap-nav` Generates a Bootstrap nav template
